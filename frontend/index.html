@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentation</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
   </head>
+
   <body>
-    <div id="root">
-      <div class="box"></div>
-      <div class="top-circle circle"></div>
-      <div class="right-circle circle"></div>
-      <div class="bottom-circle circle"></div>
-      <div class="left-circle circle"></div>
+    <h1>Presentation of flex properties</h1>
+    <h2>flex-shrink</h2>
+    <h3>Let the third flex-item shrink two times more than the rest:</h3>
+
+    <div id="main_shrink">
+      <div class="box" style="background-color: olive"></div>
+      <div class="box" style="background-color: turquoise"></div>
+      <div class="box1" style="background-color: yellow">shrinked as hell</div>
+      <div class="box" style="background-color: magenta"></div>
+      <div class="box" style="background-color: orange"></div>
+    </div>
+
+    <h2>flex-grow</h2>
+    <h3>Now let the third flex-item grow two times more than the rest:</h3>
+
+    <div id="main_grow">
+      <div style="background-color: hotpink"></div>
+      <div style="background-color: lightblue"></div>
+      <div class="box2" style="background-color: sandybrown">
+        grew double in a blink
+      </div>
+      <div style="background-color: royalblue"></div>
+      <div style="background-color: yellowgreen"></div>
     </div>
   </body>
 </html>
