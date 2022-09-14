@@ -1,21 +1,22 @@
 /* THIS IS FLEX-SHRINK PROPERTY IN WORK */
 
-#main_shrink {
+/* This is the mom container */
+
+#flex-container_shrink {
   width: 800px;
   height: 200px;
   border: 1px solid transparent;
   display: flex;
 }
 
-#main_shrink div {
-  flex-grow: 1;
-  flex-shrink: 1;
+#flex-container_shrink div {
   flex-basis: 200px;
   border: 3px solid white;
-  border-radius: 30%;
 }
 
-#main_shrink div:nth-of-type(3) {
+/* The :nth-of-type() CSS pseudo-class matches elements based on their position among siblings of the same type (tag name). */
+
+#flex-container_shrink div:nth-of-type(3) {
   flex-shrink: 2;
 }
 
@@ -33,35 +34,35 @@ h3 {
 
 /* THIS IS FLEX-GROW PROPERTY IN WORK */
 
-h2 {
-  padding-top: 10px;
-}
+/* This is the mom container */
 
-#main_grow {
+#flex-container_grow {
   width: 800px;
   height: 200px;
   border: 1px solid transparent;
   display: flex;
 }
 
-#main_grow div {
+#flex-container_grow div {
   border: 3px solid white;
   border-radius: 30%;
 }
 
-#main_grow div:nth-of-type(1) {
+/* The :nth-of-type() CSS pseudo-class matches elements based on their position among siblings of the same type (tag name). */
+
+#flex-container_grow div:nth-of-type(1) {
   flex-grow: 1;
 }
-#main_grow div:nth-of-type(2) {
+#flex-container_grow div:nth-of-type(2) {
   flex-grow: 1;
 }
-#main_grow div:nth-of-type(3) {
-  flex-grow: 3;
+#flex-container_grow div:nth-of-type(3) {
+  flex-grow: 1.5;
 }
-#main_grow div:nth-of-type(4) {
+#flex-container_grow div:nth-of-type(4) {
   flex-grow: 1;
 }
-#main_grow div:nth-of-type(5) {
+#flex-container_grow div:nth-of-type(5) {
   flex-grow: 1;
 }
 
@@ -71,4 +72,17 @@ h2 {
   align-items: center;
   color: white;
   font-weight: bold;
+}
+
+.rules {
+  padding-top: 20px;
+  font-size: large;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  padding-top: 10px;
 }
