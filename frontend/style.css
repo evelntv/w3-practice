@@ -1,0 +1,11 @@
+.january {
+  color: red;
+}
+
+#root {
+  color: green;
+}
+
+#root .january {
+  color: blue;
+}
