@@ -1,0 +1,88 @@
+$padding-s: 1.2rem;
+$padding-m: 2rem;
+
+body {
+  background-color: #c5c5c5;
+  font-family: "Quicksand", sans-serif;
+  font-size: 8px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar {
+  width: 30rem;
+  &__current-date {
+    display: flex;
+    background-color: #e94544;
+    padding: $padding-s;
+  }
+}
+
+.left-box {
+  flex: 1;
+}
+
+.right-box {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+}
+
+.calendar {
+  &__current-day {
+  }
+}
+
+.calendar {
+  &__current-month {
+  }
+}
+
+.calendar__current-day {
+  font-size: 8rem;
+  color: white;
+  line-height: 8rem;
+}
+
+.calendar__current-month {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.weather__logo {
+  font-size: 2.5rem;
+}
+
+.weather__temp {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.week {
+  display: flex;
+
+  &--daynames {
+    .day {
+      color: black;
+    }
+  }
+}
+
+.calendar__month {
+  background-color: white;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.9rem;
+  height: 3.9rem;
+  color: #e94544;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
