@@ -1,30 +1,39 @@
-let MyVariable = "value";
-//console.log(MyVariable);
+const rootElement = document.querySelector("#root");
 
-// Nem haszanlunk var-t//
+rootElement.insertAdjacentHTML("beforeend", januaryComponent());
 
-MyVariable = "new value";
-//console.log(MyVariable);
+function januaryComponent() {
+  let daysHtml = "";
 
-MyVariable = 1;
-//console.log(MyVariable);
+  for (let i = 0; i <= 31; i++) {
+    daysHtml += dayComponent(i);
+  }
 
-MyVariable = true;
-//console.log(MyVariable);
-
-let MyVariable2 = "text";
-//console.log(MyVariable2);
-
-MyVariable = MyVariable2;
-//console.log(MyVariable);
-
-let MyVariable3 = MyVariable + MyVariable2;
-//console.log(MyVariable3);
-
-function sumVariables() {
-  console.log(variable1 + variable2);
+  return `
+  <div class = "month">
+    <h2>January</h2>
+    ${daysHtml}
+  </div>
+`;
 }
 
-sumVariables(MyVariable, MyVariable2);
-sumVariables(8, nyolc);
-sumVariables("word1" + "word2");
+function dayComponent(dayCount) {
+  return `<div class= "dayCount">${dayCount}</div>;`;
+
+  const monthComponent = function (nth, name, days) {
+    let daysHtml = "";
+
+    for (let i = 0; i <= 31; i++) {
+      daysHtml += dayComponent(i);
+    }
+    return `<div id= "${nth}" class "${name}">
+    <h2>${name}</h2>
+    ${daysHtml}</div>`;
+  };
+
+  console.log("hello");
+  rootElement.insertAdjacentElement(
+    "beforeend",
+    monthComponent(1, "January", 31)
+  );
+}
