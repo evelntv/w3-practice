@@ -1,5 +1,7 @@
+$padding-xs: 1rem;
 $padding-s: 1.2rem;
 $padding-m: 2rem;
+$red: #e94544;
 
 body {
   background-color: #c5c5c5;
@@ -11,13 +13,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
+
+// CALENDAR__CURRENT-DATE SECTION //
 
 .calendar {
   width: 30rem;
+  box-shadow: 0 $padding-s $padding-s 0 rgba(0, 0, 0, 0.1);
+
   &__current-date {
     display: flex;
-    background-color: #e94544;
+    background-color: $red;
     padding: $padding-s;
   }
 }
@@ -33,24 +40,18 @@ body {
 }
 
 .calendar {
-  &__current-day {
+  &__title-day {
+    font-size: 8rem;
+    color: white;
+    line-height: 8rem;
   }
 }
 
 .calendar {
-  &__current-month {
+  &__title-month {
+    font-size: 1.5rem;
+    color: white;
   }
-}
-
-.calendar__current-day {
-  font-size: 8rem;
-  color: white;
-  line-height: 8rem;
-}
-
-.calendar__current-month {
-  font-size: 1.5rem;
-  color: white;
 }
 
 .weather__logo {
@@ -62,18 +63,52 @@ body {
   color: white;
 }
 
+// CALENDAR__CURRENT-MONTH SECTION //
+
+.all-weeks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: $padding-xs;
+}
+
 .week {
   display: flex;
+  padding: 0, $padding-s, 0, $padding-s;
 
   &--daynames {
     .day {
-      color: black;
+      color: $red;
     }
   }
 }
 
-.calendar__month {
+.calendar__current-month {
   background-color: white;
+  color: #818181;
+}
+
+//MONTH-SELECTOR SECTION //
+
+.month-selector {
+  display: flex;
+  font-size: 1.2rem;
+  padding: $padding-s $padding-m;
+}
+
+.backward-arrow {
+  flex: 1;
+}
+
+.selected-month {
+  flex: 2;
+  text-align: center;
+}
+
+.forward-arrow {
+  flex: 1;
+  display: flex;
+  justify-content: right;
 }
 
 .day {
@@ -82,7 +117,6 @@ body {
   justify-content: center;
   width: 3.9rem;
   height: 3.9rem;
-  color: #e94544;
   gap: 1rem;
   font-size: 1.2rem;
 }
